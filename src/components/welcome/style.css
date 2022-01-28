@@ -1,0 +1,70 @@
+html {
+  font-size: 62.5%;
+}
+
+.welcomePage {
+  min-height: 100vh;
+  background-image: linear-gradient(#00013a, #008eda);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.flex1 {
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.flex2 {
+  margin-top: 5rem;
+}
+
+.flex2 > h1 {
+  color: white;
+  font-size: 7rem;
+  font-weight: lighter;
+  margin-top: 0.5rem;
+  font-family: Opera, serif;
+  letter-spacing: 0.4rem;
+}
+
+.flex3 {
+  margin-top: 8rem;
+}
+
+button {
+  padding: 1em 6em;
+  font-weight: bold;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  border: none;
+  outline: none;
+}
+
+#assistanceBtn {
+  width: 6.2rem;
+  height: 5.4rem;
+}
+
+#logo {
+  width: 14.8rem;
+  height: 15.7rem;
+}
+
+.get_started_link {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px 4rem 8px 4rem;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(53, 53, 53);
+}
