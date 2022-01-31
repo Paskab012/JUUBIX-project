@@ -1,15 +1,20 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/jsx-indent */
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable quotes */
 // eslint-disable-next-line quotes
 import React from "react";
 import "./login.css";
+// import { NavLink } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-
+import LoginButton from "./LoginButton";
 import sideSquares from "../../assets/Blue-and-Yellow-Educate-Kids-Charity-Infographic-1-410x1024 1.png";
 import juubixLogo from "../../assets/juubixlogo.png";
-import linkedinIcon from "../../assets/linkedin.png";
-import googleIcon from "../../assets/google.png";
-import twitterIcon from "../../assets/Vector.png";
+import ValidBtn from "./ValidBtn";
 
 const LoginPage = () => (
   <div className="login_page">
@@ -19,30 +24,33 @@ const LoginPage = () => (
       <div className="login_section">
         <div className="login_card">
           <img src={juubixLogo} alt="juubix logo" />
-          <p>sign in with:</p>
+          <h1 className="paragraphe">Welcome Back</h1>
           <div className="sign_in_icons">
-            <img className="sign_in_icon" alt="login links" src={twitterIcon} />
-            <img
-              className="sign_in_icon"
-              alt="login links"
-              src={linkedinIcon}
-            />
-            <img className="sign_in_icon" alt="login links" src={googleIcon} />
+            <LoginButton />
+          </div>
+          <div className="text-or">
+            <p>OR CONTINUE WITH EMAIL</p>
           </div>
           <form className="login_form">
-            <label htmlFor="email">Email adress</label>
+            <label htmlFor="email" className="email-label">
+              Type your username
+            </label>
             <input
               type="email"
-              placeholder="user@mail.com"
+              placeholder="Type your username"
               className="form_input"
               id="email"
+              required
             />
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" className="email-label">
+              Password
+            </label>
             <input
               type="password"
               className="form_input"
-              placeholder="********"
+              placeholder="Enter your password"
               id="password"
+              required
             />
             <div className="form_remember_div">
               <div>
@@ -52,7 +60,9 @@ const LoginPage = () => (
                   Remember me
                 </label>
               </div>
-              <a href="../register/RegisterPage.js">forgot password?</a>
+              <div className="form-forget">
+                <a href="../register/RegisterPage.js">forgot password?</a>
+              </div>
             </div>
             <div>
               <label className="skill_check" htmlFor="robot">
@@ -62,10 +72,16 @@ const LoginPage = () => (
               </label>
             </div>
             <div className="form_buttons">
-              <input type="submit" className="form_submit" value="Sign in" />
-              <NavLink to="/interest" className="sign_up_link">
-                Sigh up
-              </NavLink>
+              <ValidBtn />
+            </div>
+            <hr />
+            <div className="already-signup">
+              <p className="already-text">
+                Not a member of JUUBIX?
+                <NavLink to="/register" className="create-now">
+                  Create your account now
+                </NavLink>
+              </p>
             </div>
           </form>
         </div>

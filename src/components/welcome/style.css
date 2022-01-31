@@ -5,39 +5,101 @@ html {
 .welcomePage {
   min-height: 100vh;
   background-image: linear-gradient(#00013a, #008eda);
+  display: flex;
+  justify-content: space-between;
+}
+.lines {
+  display: flex;
+  width: 15%;
+}
+
+.lines-decoration1 {
+  background-image: linear-gradient(
+    180deg,
+    #796e06 0%,
+    rgba(255, 230, 0, 0) 100%
+  );
+  height: 250px;
+  width: 20px;
+  top: 0;
+  margin-right: 20px;
+}
+
+.lines-decoration2 {
+  background-image: linear-gradient(
+    180deg,
+    #764b07 0%,
+    rgba(252, 181, 69, 0) 100%
+  );
+  height: 350px;
+  width: 20px;
+  margin-right: 20px;
+  top: 0;
+}
+
+.lines-decoration3 {
+  background-image: linear-gradient(
+    180deg,
+    #156c6c 0%,
+    rgba(196, 196, 196, 0) 100%
+  );
+  height: 450px;
+  width: 20px;
+  margin-right: 20px;
+  top: 0;
+}
+
+.lines-decoration4 {
+  background-image: linear-gradient(
+    180deg,
+    #994e07 0%,
+    rgba(156, 116, 5, 0) 100%
+  );
+  height: 600px;
+  width: 20px;
+  top: 0;
 }
 
 .container {
+  flex: 4;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style-type: none;
   max-height: 100vh;
-  margin: 0;
   padding: 0;
+  width: 70%;
+  margin-left: 7%;
 }
 
 .flex1 {
-  align-self: flex-end;
-  margin-top: 1.5rem;
-  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.flex1 img {
+  object-fit: contain;
+  background-color: rgb(255, 255, 255) !important;
+  padding: 1px 5px 1px 5px;
+  border-radius: 60%;
 }
 
 .flex2 {
   margin-top: 5rem;
+  margin-bottom: 20rem;
 }
 
 .flex2 > h1 {
-  color: white;
-  font-size: 7rem;
+  color: rgb(184, 184, 184);
+  font-size: 50px;
   font-weight: lighter;
   margin-top: 0.5rem;
   font-family: Opera, serif;
   letter-spacing: 0.4rem;
+  font-weight: 400;
 }
 
 .flex3 {
-  margin-top: 8rem;
+  margin-top: 9rem;
 }
 
 button {
@@ -55,16 +117,43 @@ button {
 }
 
 #logo {
-  width: 14.8rem;
-  height: 15.7rem;
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 3rem;
 }
 
 .get_started_link {
-  background-color: white;
-  border-radius: 8px;
-  padding: 8px 4rem 8px 4rem;
-  font-size: 15px;
+  background-color: rgb(250, 249, 242);
+  border-radius: 4px;
+  padding: 2rem 8rem 2rem 8rem;
+  font-size: 22px;
   font-weight: 600;
   text-decoration: none;
   color: rgb(53, 53, 53);
+  font-family: "Poppins", sans-serif;
+  width: 500px;
+}
+
+.get_started_link {
+  width: 500px;
+}
+
+.get_started_link:hover {
+  background-color: #ffffff;
+  color: #003a90;
+  border: 2px solid #ff9028;
+}
+
+.welcome-image {
+  width: 30%;
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.welcome-image img {
+  width: 800px;
+  height: 102.85%;
+  margin-right: -180px;
 }
